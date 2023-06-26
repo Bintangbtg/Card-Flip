@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+:root{
+    --golden: #daa520;
+    --red: #e72025;
+    --blue: #26468b;
+    --dark: #1f1d27;
+    --lightdark: #292f40;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+.card .face{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 6px solid var(--blue);
+    transform: perspective(500px) rotateY(0);
+    transition: 1.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.card .face.front{
+    background-color: #1f1d27;
+}
+.card:hover .face.front{
+    transform: perspective(500px) rotateY(180deg);
+}
+.card .face.face.front img{
+    width: 100%;
+}
+.card .face.back{
+    flex-direction: column;
+    transform: perspective(500px) rotateY(180deg);
+    background-color: #1f1d27;
+}
+.card:hover .face.face.back{
+    transform: perspective(500px) rotateY(360deg);
+}
+.card .face.face.back{
+    display: flex;
+    width: calc(100% - 1rem);
+}
+.card .face.back img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 90px;
+    top: 29px;
+}
+.card .face.back .informasi1{
+    position: absolute;
+    width: 163px;
+    height: 36px;
+    left: calc(50% - 163px/2 + 0.5px);
+    top: 145px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+.card .face.back .Rectangle{
+    position: absolute;
+    width: 171px;
+    height: 4px;
+    left: 52px;
+    top: 181px;
+    background: #D9D9D9;
+}
+.card .face.back .Informasi2{
+    position: absolute;
+    width: 110px;
+    height: 24px;
+    left: 85px;
+    top: 189px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.card .face.back .rectangle1{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: calc(50% - 200px/2);
+    top: 241px;
+    background: #D9D9D9;
+    border-radius: 10px;
+}
+.card .face.back .rectangle1 a{
+    position: absolute;
+    width: 154px;
+    height: 24px;
+    left: 28px;
+    top: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.card .face.back .rectangle2{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: calc(50% - 200px/2);
+    top: 289px;
+    background: #D9D9D9;
+    border-radius: 10px;
+}
+.card .face.back .rectangle2 a{
+    position: absolute;
+    width: 174px;
+    height: 24px;
+    left: 33px;
+    top: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.card .face.back .rectangle3 {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    background: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 329px;
+    justify-content: center;
+    align-items: center;
+}
+.card .face.back .rectangle3 a {
+    position: absolute;
+    left: 73px;
+    top: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
